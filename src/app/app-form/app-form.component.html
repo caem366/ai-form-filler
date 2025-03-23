@@ -1,0 +1,35 @@
+<div class="form-container">
+  <h2>Form Filler</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">First Name:</label><br />
+      <input type="text" id="firstName" formControlName="firstName" /><br><br>
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label><br/>
+      <input type="text" id="lastName" formControlName="lastName" /><br><br>
+    </div>
+    <div>
+      <label for="dob">Date of Birth:</label><br />
+      <input type="date" id="dob" formControlName="dob"><br><br>
+    </div>
+    <div>
+      <label for="address">Address:</label><br> 
+      <input type="text" id="address" formControlName="address" /><br><br>
+    </div>
+    <div>
+      <label for="city">City:</label><br/>
+      <input type="text" id="city" formControlName="city" /><br><br>
+    </div>
+    <div>
+      <label for="province">Province:</label><br />
+      <input type="text" id="province" formControlName="province" /><br><br>
+    </div>
+    <div>
+      <label for="idDocument">Upload ID Document:</label><br />
+      <input type="file" id="idDocument" (change)="onFileUpload($event)" /><br><br>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
